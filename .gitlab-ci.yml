@@ -4,7 +4,10 @@ pages:
   stage: deploy
   script:
   - echo 'go go go...'
+  - rm -rf public
+  - ls
   - mv * public
+  - ls
   artifacts:
     paths:
     - public
