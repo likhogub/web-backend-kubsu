@@ -6,7 +6,7 @@ pages:
   - echo 'go go go...'
   - rm -rf public
   - ls
-  - mv . public/
+  - cp * public/
   - ls
   artifacts:
     paths:
