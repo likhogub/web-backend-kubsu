@@ -5,9 +5,8 @@ pages:
   script:
   - echo 'go go go...'
   - rm -rf public
-  - ls
-  - cp -r task* public
-  - ls
+  - mkdir public
+  - find * -maxdepth 0 -iname 'task*' -exec cp -r {} public/{} \;
   artifacts:
     paths:
     - public
