@@ -1,3 +1,53 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>TASK 3</title>
+    <style>
+	   form {
+	       width: 600px;
+	       height: 700px;
+	       background: white;
+	       border-radius: 8px;
+	       margin: 0 auto;
+	       padding: 30px;
+	       box-shadow: 0px 0px 14px 0px rgba(50, 50, 50, 0.75);
+	   }
+	   p {
+	       line-height: 0.5;
+	   }
+	   label {
+	       margin: 3px;
+	   }
+	   input {
+	       margin: 8px 0;
+	   }
+	   input[type="text"], input[type="email"] {
+	       width: 100%;
+	       height: 30px;
+	       border-radius: 5px;
+	       border: 2px solid grey;
+	       outliine: none;
+	       padding: 7px;
+	   }
+	   input[type="checkbox"] {
+	       margin-right: 7px;
+	   }
+	   textarea {
+	       width: 300px;
+	       height: 150px;
+	       padding: 7px;
+	   }
+	   input[type="submit"] {
+	       padding: 7px 20px;
+	       border-radius: 5px;
+	       box-shadow: 0px 0px 5px 0px rgba(46, 53, 55, 0.5);
+	   }
+	   input[type="submit"]:hover {
+	       cursor: pointer;
+	   }
+	</style>
+</head>
+<body>
 <form action="" method="POST">
     <label>
       Имя:<br />
@@ -10,8 +60,15 @@
         type="email" />
     </label><br />
     <label>
-      Дата рождения:<br />
-      <input name="field-date" type="date" value="2020-09-07"/>
+      Год рождения:<br />
+    <select name="year">
+      <?php for ($i = 1900; $i < 2021;$i++) {
+        print('<option type="value" value="');
+        print($i);
+        print('">');
+        print($i);
+        print('</option>');}?>
+    </select>
     </label><br />
     Пол:<br />
     <label><input type="radio" checked="checked"
@@ -38,9 +95,9 @@
         <br />
         <select name="power[]"
           multiple="multiple">
-          <option value="god">Бессмертие</option>
-          <option value="clip">Прохождение сквозь стены</option>
-          <option value="fly">Левитация</option>
+          <option value="ab_god">Бессмертие</option>
+          <option value="ab_clip">Прохождение сквозь стены</option>
+          <option value="ab_fly">Левитация</option>
         </select>
     </label><br />
     <label>
@@ -52,3 +109,5 @@
       С контрактом ознакомлен</label><br />
     <input type="submit" value="Отправить" />
 </form>
+</body>
+</html>
